@@ -48,7 +48,8 @@ def get_db_chain():
     df = pd.read_csv('dataset.csv')
 
     # Initialize the generative AI model
-    genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+    # GOOGLE_API_KEY = 'AIzaSyB4E57nRa9eM92K938fjz7FGJ-LoU-ppfk'
+    genai.configure(api_key== 'AIzaSyB4E57nRa9eM92K938fjz7FGJ-LoU-ppfk')
     google_model = genai.GenerativeModel(model_name="gemini-1.5-flash")
     llm = GoogleAIWrapper(google_model)
 

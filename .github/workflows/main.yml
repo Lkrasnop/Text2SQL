@@ -9,35 +9,45 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
     - uses: actions/checkout@v2
     
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.12'
     
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y poppler-utils
+    
+    - name: Set up Chrome
+      uses: browser-actions/setup-chrome@latest
+    
+    - name: Set up ChromeDriver
+      uses: nanasess/setup-chromedriver@master
+    
     - name: Debug Environment
       run: |
         python --version
         pip list
-        env | grep -v -i key
+        which chromedriver
+        chromedriver --version
+        google-chrome --version
     
-    - name: Run main script with debug
-      run: |
-        python -c "import sys; print(sys.path)"
-        python main.py
+    - name: Run main script
+      run: python main.py
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-
-    - name: Run app
-      run: |
-        python app.py
+    
+    - name: Run app script
+      run: python app.py
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}

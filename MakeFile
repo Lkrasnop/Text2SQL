@@ -28,7 +28,7 @@ git:
 	git status
 	git add . &&\
 	git fetch origin &&\
-	git merge origin/main
+	git merge origin/main &&\
 	git commit -m "create dockr file + add to makefile" &&\
 	git push
 # git fetch origin

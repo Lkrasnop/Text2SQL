@@ -1,0 +1,33 @@
+venv:
+	python3 -m venv venv
+	# source venv/bin/activate   # On macOS and Linux
+
+source: 
+	source venv/bin/activate
+
+install:
+	pip install --upgrade pip &&\
+	pip install -r requirements.txt
+
+run: install
+	python3 main.py
+
+format:
+	black app.py
+
+lint: format
+	pylint --disable=R,C app.py
+
+remove:
+	rm -rf venv
+
+deactivate:
+	deactivate
+
+git:
+	git status
+	git add . &&\
+	git commit -m "add Transform_pdf_to_text.py in src + add pydf2 + chromadb packages in requirements.txt" &&\
+	git push
+# git fetch origin
+# git merge origin/main

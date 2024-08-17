@@ -1,4 +1,4 @@
-name: Text2SQL: Docker CI/CD Pipeline
+name: Text2SQL -  Docker CI/CD Pipeline
 on:
   push:
     branches: [ main ]

@@ -23,8 +23,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
-    - name: Run main script
+    - name: Debug Environment
       run: |
+        python --version
+        pip list
+        env | grep -v -i key
+    
+    - name: Run main script with debug
+      run: |
+        python -c "import sys; print(sys.path)"
         python main.py
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}

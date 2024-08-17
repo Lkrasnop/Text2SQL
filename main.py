@@ -12,7 +12,16 @@ import re
 # Load the .env file
 load_dotenv()
 
+import os
+import sys
+import google.generativeai as genai
 
+api_key = os.getenv('GOOGLE_API_KEY')
+if not api_key:
+    print("Error: GOOGLE_API_KEY environment variable is not set.")
+    api_key= 'sk-None-o7b4yULsCTmGFIuGE6m9T3BlbkFJ594s8tsXlhBsX6dPAuWB'
+
+genai.configure(api_key=api_key)
 class GoogleAIWrapper(LLM):
     model: Any
 

@@ -12,13 +12,7 @@ import re
 # Load the .env file
 load_dotenv()
 
-import os
-import sys
-import google.generativeai as genai
 
-api_key = 'AIzaSyB4E57nRa9eM92K938fjz7FGJ-LoU-ppfk'
-
-genai.configure(api_key=api_key)
 class GoogleAIWrapper(LLM):
     model: Any
 

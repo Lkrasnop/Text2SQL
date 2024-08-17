@@ -1,4 +1,4 @@
-name: Python Application CI
+name: Text2SQL: Docker CI/CD Pipeline
 on:
   push:
     branches: [ main ]

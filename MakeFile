@@ -54,13 +54,13 @@ docker-clean: docker-stop
 docker-test:
 	docker run --rm $(DOCKER_IMAGE_NAME) python -m unittest test.py
 
-# # Git commands
-# git:
-# 	git status
-# 	git add . &&\
-# 	git fetch origin &&\
-# 	git commit -m "create docker file + add to makefile" &&\
-# 	git push
+# Git commands
+git:
+	git status
+	git add . &&\
+	git fetch origin &&\
+	git commit -m "create docker file + add to makefile" &&\
+	git push
 
 # Test command (can be used for both local and Docker environments)
 test:

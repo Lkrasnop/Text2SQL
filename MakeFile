@@ -58,7 +58,6 @@ docker-test:
 git:
 	git status
 	git add . &&\
-	git fetch origin &&\
 	git commit -m "create docker file + add to makefile" &&\
 	git push
 

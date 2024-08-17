@@ -19,7 +19,7 @@ import google.generativeai as genai
 api_key = os.getenv('GOOGLE_API_KEY')
 if not api_key:
     print("Error: GOOGLE_API_KEY environment variable is not set.")
-    api_key= 'sk-None-o7b4yULsCTmGFIuGE6m9T3BlbkFJ594s8tsXlhBsX6dPAuWB'
+    api_key= 'AIzaSyB4E57nRa9eM92K938fjz7FGJ-LoU-ppfk'
 
 genai.configure(api_key=api_key)
 class GoogleAIWrapper(LLM):

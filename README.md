@@ -2,6 +2,8 @@
 
 [![Python Application CI](https://github.com/Lkrasnop/Text2SQL/actions/workflows/main.yml/badge.svg)](https://github.com/Lkrasnop/Text2SQL/actions/workflows/main.yml)
 
+[![Python Application CI](https://github.com/Lkrasnop/Text2SQL/actions/workflows/test_main.yml/badge.svg)](https://github.com/Lkrasnop/Text2SQL/actions/workflows/test_main.yml)
+
 1. Running run.bat file 
 2. If the steamlit asking for Email just write 'no-replay@example.com' 
 3. where the local host page will raise enter the prompt about the databased. 

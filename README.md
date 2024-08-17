@@ -1,6 +1,6 @@
 # Text2SQL
 
-[![Python Application CI](https://github.com/Lkrasnop/Text2SQL/actions/workflows/main.yml/badge.svg)](https://github.com/Lkrasnop/Text2SQL/actions/workflows/main.yml)
+[![Text2SQL - CI/CD Pipeline](https://github.com/Lkrasnop/Text2SQL/actions/workflows/main.yml/badge.svg)](https://github.com/Lkrasnop/Text2SQL/actions/workflows/main.yml)
 
 [![Python Application CI](https://github.com/Lkrasnop/Text2SQL/actions/workflows/test_main.yml/badge.svg)](https://github.com/Lkrasnop/Text2SQL/actions/workflows/test_main.yml)
 

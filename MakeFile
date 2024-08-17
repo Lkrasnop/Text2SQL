@@ -27,6 +27,7 @@ deactivate:
 git:
 	git status
 	git add . &&\
+	git fetch origin &&\
 	git commit -m "add Transform_pdf_to_text.py in src + add pydf2 + chromadb packages in requirements.txt" &&\
 	git push
 # git fetch origin
